@@ -1,0 +1,10 @@
+services:
+  experiment:
+    build: .
+    environment:
+      HF_HOME: /hf-cache
+    volumes:
+      - ./runs:/app/runs
+      - xsum-cache:/hf-cache
+volumes:
+  xsum-cache:
